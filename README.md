@@ -23,7 +23,7 @@ An example of using react (showing that compiling works:
 
 `npm install --save react react-dom`
 
-```js
+```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
 
