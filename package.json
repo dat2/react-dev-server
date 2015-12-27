@@ -1,0 +1,24 @@
+{
+  "name": "react-dev-server",
+  "version": "0.1.0",
+  "description": "A simple wrapper around webpack-dev-server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dat2/react-dev-server.git"
+  },
+  "keywords": [
+    "react",
+    "webpack",
+    "development"
+  ],
+  "author": "Nicholas Dujay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dat2/react-dev-server/issues"
+  },
+  "homepage": "https://github.com/dat2/react-dev-server#readme"
+}
