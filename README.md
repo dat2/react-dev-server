@@ -21,8 +21,9 @@ And you are up and running a webpack-dev-server preconfigured to work with react
 
 An example of using react (showing that compiling works:
 
-1. `npm install --save react react-dom`
-2. ```jsx
+`npm install --save react react-dom`
+
+```js
 import React from 'react';
 import ReactDOM from 'react-dom';
 
