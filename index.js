@@ -5,7 +5,7 @@ var args = require('./src/args');
 
 if(args.init) {
   // generate the project structure
-  cp('-r', __dirname + '/templates', './');
+  cp('-r', __dirname + '/templates/*', './');
   echo('The project is generated.');
   echo('I am leaving it up to you to');
   echo('npm install --save react react-dom');
