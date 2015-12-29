@@ -46,6 +46,10 @@ module.exports = {
     ]
   },
 
+  node: {
+    fs: 'empty'
+  },
+
   devtool: 'inline-source-map',
 
   plugins: [
