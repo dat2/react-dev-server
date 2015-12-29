@@ -27,7 +27,7 @@ An example of using react (showing that compiling works:
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const elements = ['hello', 'world']
+const elements = ['hello', 'world'];
 ReactDOM.render((
 <div>
   <ul>
