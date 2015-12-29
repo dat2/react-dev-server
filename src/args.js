@@ -5,16 +5,16 @@ module.exports = require('yargs')
   .alias('h', 'help')
   .options({
     init: {
-      describe: 'Initialize the project structure',
+      describe: 'Initialize the project structure.',
       boolean: true,
       default: false
     },
     src: {
-      describe: 'The base directory for your application',
+      describe: 'The base directory for your application.',
       default: 'src'
     },
     entry: {
-      describe: 'The entry point[s] to your application',
+      describe: 'The entry point(s) to your application.',
       default: 'index.js',
       array: true
     },
@@ -35,12 +35,8 @@ module.exports = require('yargs')
       default: 8080
     },
     build: {
-      describe: 'Build the app into the output directory',
+      describe: 'Build the app into the static directory.',
       default: false
-    },
-    dest: {
-      describe: 'The destination directory',
-      default: 'dist'
     }
   })
   .showHelpOnFail(false, 'Specify --help for available options')

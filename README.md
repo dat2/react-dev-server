@@ -1,28 +1,38 @@
 # react-dev-server
-A wrapper around webpack-dev-server so users can get react up and running really
-quickly.
-
-# Features
-- live reloading
-- hot module replacement
-- react compiling
+A wrapper around `webpack-dev-server` so users can get a `react` application
+running. If you want any sort of customization, you will have to make your own
+webpack config.
 
 # Usage
 1. `npm install -g react-dev-server`
-2. `react-dev-server --init` this generates the folder structure that
-    `react-dev-server` expects
-  - The folder structure that react-dev-server expects is very simple: you
-    need a `src` folder, with an `index.js`, and an `index.html` file. We
-    generate the `index.html` file so that it includes the `bundle.js` file for
-    you.
-3. `react-dev-server [--stage-0]`
+2. `react-dev-server --init` this generates `public/index.html` and `src/index.js`,
+   and installs some webpack stuff to your `devDependencies`.
+3. `npm install react react-dom`
+4. `react-dev-server [--stage-0]`
 
 And you are up and running a webpack-dev-server preconfigured to work with react!
 
-An example of using react (showing that compiling works:
+If you are new to npm, you will want to search how to use npm. Usually you'd
+start with `npm init` and then do `npm install --save react react-dom`, but for
+the sake of this example I left that out.
 
-`npm install --save react react-dom`
+# Options
+```
+Usage: react-dev-server
 
+Options:
+  --init      Initialize the project structure.                 [default: false]
+  --src       The base directory for your application.          [default: "src"]
+  --entry     The entry point(s) to your application.      [default: "index.js"]
+  --static    The directory for your static files.           [default: "public"]
+  --index     The index.html file.                       [default: "index.html"]
+  --stage-0   Use the stage-0 preset for babel.                 [default: false]
+  --port      The port to run the server on.                     [default: 8080]
+  --build     Build the app into the static directory.          [default: false]
+  -h, --help  Show help
+```
+
+# Example
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -39,3 +49,7 @@ ReactDOM.render((
 </div>
 ), document.getElementById('test'));
 ```
+
+# Future Plans
+- Allow webpack customization, by generating webpack.config.js prefilled
+  for the user.
