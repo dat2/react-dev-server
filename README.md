@@ -5,8 +5,7 @@ webpack config.
 
 # Usage
 1. `npm install -g react-dev-server`
-2. `react-dev-server --init` this generates `public/index.html` and `src/index.js`,
-   and installs some webpack stuff to your `devDependencies`.
+2. `react-dev-server --init` this generates `public/index.html` and `src/index.js`.
 3. `npm install react react-dom`
 4. `react-dev-server [--stage-0]`
 
