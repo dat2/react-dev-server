@@ -37,6 +37,11 @@ module.exports = require('yargs')
     build: {
       describe: 'Build the app into the static directory.',
       default: false
+    },
+    proxy: {
+      describe: 'A list of proxy paths to hosts',
+      default: [],
+      array: true
     }
   })
   .showHelpOnFail(false, 'Specify --help for available options')
