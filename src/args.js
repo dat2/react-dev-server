@@ -30,6 +30,10 @@ module.exports = require('yargs')
       describe: 'Use the stage-0 preset for babel.',
       default: false
     },
+    hot: {
+      describe: 'Hot module reload for webpack-dev-serevr',
+      default: true
+    },
     port: {
       describe: 'The port to run the server on.',
       default: 8080

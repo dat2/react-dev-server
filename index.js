@@ -13,7 +13,6 @@ if(args.init) {
   // build the project
   var compiler = require('./src/compiler');
   compiler.run(function(err, stats) {
-
   });
 } else {
   // make a local dev server

@@ -20,15 +20,17 @@ the sake of this example I left that out.
 Usage: react-dev-server
 
 Options:
-  --init      Initialize the project structure.                 [default: false]
+  --init      Initialize the project structure.       [boolean] [default: false]
   --src       The base directory for your application.          [default: "src"]
-  --entry     The entry point(s) to your application.      [default: "index.js"]
+  --entry     The entry point(s) to your application.
+                                                   [array] [default: "index.js"]
   --static    The directory for your static files.           [default: "public"]
   --index     The index.html file.                       [default: "index.html"]
   --stage-0   Use the stage-0 preset for babel.                 [default: false]
   --port      The port to run the server on.                     [default: 8080]
   --build     Build the app into the static directory.          [default: false]
-  -h, --help  Show help
+  --proxy     A list of proxy paths to hosts               [array] [default: []]
+  -h, --help  Show help                                                [boolean]
 ```
 
 # Example
