@@ -15,6 +15,14 @@ If you are new to npm, you will want to search how to use npm. Usually you'd
 start with `npm init` and then do `npm install --save react react-dom`, but for
 the sake of this example I left that out.
 
+## Proxy
+If you'd like to proxy to an alternative backend server, you can use the `proxy` option as follows:
+
+```shell
+react-dev-server --proxy "/socket.io:http://localhost:5555/socket.io" --proxy "/api:http://localhost:5555/api"
+```
+Notice you can add multiple entries, and the format is `<path>:<server>`.
+
 # Options
 ```
 Usage: react-dev-server

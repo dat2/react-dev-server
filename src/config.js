@@ -2,6 +2,7 @@ var path = require('path');
 var fs = require('fs');
 var webpack = require('webpack');
 var json5 = require('json5');
+var Immutable = require('immutable');
 
 var args = require('./args');
 
@@ -38,6 +39,10 @@ function readUserBabelrc() {
   }
 }
 
+var immQuery = Immutable.fromJS(query);
+var immBabelrc = Immutable.fromJS(readUserBabelrc());
+var babelConfig = immQuery.mergeDeepWith( function(a, b) { return a.concat(b); }, immBabelrc);
+
 module.exports = {
   entry: entries,
 
@@ -52,7 +57,7 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         loader: useReactDevServerPackage('babel-loader'),
-        query: Object.assign(query, readUserBabelrc())
+        query: babelConfig.toJS()
       }
     ]
   },
