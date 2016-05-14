@@ -36,8 +36,6 @@ if(args.hot && !args.build) {
   plugins.unshift(new webpack.HotModuleReplacementPlugin());
 }
 
-console.log(entries, plugins);
-
 function readUserBabelrc() {
   try {
     return json5.parse(fs.readFileSync(path.resolve(process.cwd(), '.babelrc'), 'utf-8'));
