@@ -32,7 +32,7 @@ module.exports = require('yargs')
     },
     hot: {
       describe: 'Hot module reload for webpack-dev-serevr',
-      default: true
+      default: false
     },
     port: {
       describe: 'The port to run the server on.',

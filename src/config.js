@@ -31,6 +31,13 @@ if(args.hot && !args.build) {
   entries.unshift(useReactDevServerPackage('webpack/hot/dev-server'));
 }
 
+var plugins = [];
+if(args.hot && !args.build) {
+  plugins.unshift(new webpack.HotModuleReplacementPlugin());
+}
+
+console.log(entries, plugins);
+
 function readUserBabelrc() {
   try {
     return json5.parse(fs.readFileSync(path.resolve(process.cwd(), '.babelrc'), 'utf-8'));
@@ -68,7 +75,5 @@ module.exports = {
 
   devtool: 'inline-source-map',
 
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ]
+  plugins: plugins
 };
