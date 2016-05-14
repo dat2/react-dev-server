@@ -1,6 +1,6 @@
 {
   "name": "react-dev-server",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "A simple wrapper around webpack-dev-server",
   "main": "index.js",
   "bin": "index.js",
