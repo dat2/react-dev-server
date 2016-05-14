@@ -19,7 +19,8 @@ the sake of this example I left that out.
 If you'd like to proxy to an alternative backend server, you can use the `proxy` option as follows:
 
 ```shell
-react-dev-server --proxy "/socket.io:http://localhost:5555/socket.io" --proxy "/api:http://localhost:5555/api"
+react-dev-server --proxy "/socket.io:http://localhost:5555/socket.io"
+--proxy "/api:http://localhost:5555/api"
 ```
 Notice you can add multiple entries, and the format is `<path>:<server>`.
 
@@ -59,6 +60,20 @@ ReactDOM.render((
 ), document.getElementById('test'));
 ```
 
+# Customization
+You can add stuff to your babel rc, for example `react-transform` can be added
+by copying the "env" section into a `.babelrc` in your project's root directory
+
+eg.
+
+```
+<project>
++-- .babelrc
++-- public
++-- src
+```
+
+And the options will be added the `react-dev-server`s options.
+
 # Future Plans
-- Allow webpack customization, by generating webpack.config.js prefilled
-  for the user.
+- Allow webpack customization
